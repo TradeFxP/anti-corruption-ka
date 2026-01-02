@@ -1,4 +1,5 @@
-import { Shield, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
+import { logo } from '../assets';
 
 export default function ACCFooter() {
   const scrollToSection = (id: string) => {
@@ -14,10 +15,10 @@ export default function ACCFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <Shield className="h-8 w-8 text-light" />
+              <img src={logo} alt="ACC Logo" className="h-8 w-8 object-cover rounded" />
               <div className="flex flex-col">
-                <span className="font-bold text-lg text-white leading-tight">Anti Corruption Committee </span>
-                <span className="text-xs text-light/70 leading-tight text-white"> ACC-Andhra Pradesh</span>
+                <span className="font-bold text-lg text-white leading-tight">Anti-Corruption Committee </span>
+                <span className="text-xs font-bold text-white leading-tight"> ACC-Andhra Pradesh</span>
               </div>
             </div>
             <p className="text-sm text-light/70">

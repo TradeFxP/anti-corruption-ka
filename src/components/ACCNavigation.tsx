@@ -1,18 +1,32 @@
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { logo } from '../assets';
 
 export default function ACCNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-      setIsHomeDropdownOpen(false);
+    // If not on home page, navigate to home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsOpen(false);
+    setIsHomeDropdownOpen(false);
   };
 
   const mainNavItems = [
@@ -20,7 +34,6 @@ export default function ACCNavigation() {
     { id: 'report', label: 'Report Corruption' },
     { id: 'rights', label: 'Citizen Rights' },
     { id: 'join', label: 'Join Us' },
-    { id: 'contact', label: 'Contact' },
   ];
 
   const homeDropdownItems = [
@@ -35,8 +48,8 @@ export default function ACCNavigation() {
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('home')}>
             <img src={logo} alt="ACC Logo" className="h-10 w-10 object-cover rounded" />
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-text leading-tight">  Anti Corruption Committee</span>
-              <span className="text-xs text-secondary leading-tight">ACC  Andhra Pradesh </span>
+              <span className="font-bold text-lg text-text leading-tight">  Anti-Corruption Committee</span>
+              <span className="text-xs text-secondary leading-tight">ACC-Andhra Pradesh </span>
             </div>
           </div>
 
@@ -76,6 +89,20 @@ export default function ACCNavigation() {
                 {item.label}
               </button>
             ))}
+            
+            {/* Contact and Auth Links */}
+            <Link
+              to="/contact"
+              className="px-3 py-2 text-sm font-medium text-text hover:text-primary hover:bg-light/30 rounded-md transition-colors"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/signin"
+              className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-primary to-secondary hover:from-dark hover:to-primary rounded-md transition-colors"
+            >
+              Sign In
+            </Link>
           </div>
 
           <button
@@ -123,6 +150,22 @@ export default function ACCNavigation() {
                 {item.label}
               </button>
             ))}
+            
+            {/* Mobile Contact and Auth Links */}
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-text hover:text-primary hover:bg-light/30 rounded-md"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/signin"
+              onClick={() => setIsOpen(false)}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-white bg-gradient-to-r from-primary to-secondary hover:from-dark hover:to-primary rounded-md"
+            >
+              Sign In
+            </Link>
           </div>
         </div>
       )}

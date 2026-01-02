@@ -1,30 +1,19 @@
-import ACCNavigation from './components/ACCNavigation';
-import ACCHero from './components/ACCHero';
-import About from './components/About';
-import VisionMission from './components/VisionMission';
-import WhatWeDo from './components/WhatWeDo';
-import ReportCorruption from './components/ReportCorruption';
-import CitizenRights from './components/CitizenRights';
-import JoinUs from './components/JoinUs';
-import CodeOfEthics from './components/CodeOfEthics';
-import Contact from './components/Contact';
-import ACCFooter from './components/ACCFooter';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <ACCNavigation />
-      <ACCHero />
-      <About />
-      <VisionMission />
-      <WhatWeDo />
-      <ReportCorruption />
-      <CitizenRights />
-      <JoinUs />
-      <CodeOfEthics />
-      <Contact />
-      <ACCFooter />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+      </Routes>
+    </Router>
   );
 }
 

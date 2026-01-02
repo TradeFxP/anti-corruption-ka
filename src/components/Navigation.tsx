@@ -1,10 +1,24 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { logo } from '../assets';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
+
+  const handleSwitchToSignUp = () => {
+    setShowSignIn(false);
+    setShowSignUp(true);
+  };
+
+  const handleSwitchToSignIn = () => {
+    setShowSignUp(false);
+    setShowSignIn(true);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-sm border-b border-slate-800">
@@ -61,11 +75,17 @@ export default function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <button className="px-5 py-2.5 text-sm font-medium text-slate-300 hover:text-light transition">
+            <button 
+              onClick={() => setShowSignIn(true)}
+              className="px-5 py-2.5 text-sm font-medium text-slate-300 hover:text-light transition"
+            >
               Sign In
             </button>
-            <button className="px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary hover:from-dark hover:to-primary rounded-lg transition shadow-md hover:shadow-primary/30">
-              Request Demo
+            <button 
+              onClick={() => setShowSignUp(true)}
+              className="px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary hover:from-dark hover:to-primary rounded-lg transition shadow-md hover:shadow-primary/30"
+            >
+              Sign Up
             </button>
           </div>
 
@@ -112,16 +132,34 @@ export default function Navigation() {
               Pricing
             </a>
             <div className="pt-3 space-y-2">
-              <button className="w-full px-5 py-2.5 text-sm font-medium text-slate-300 border border-slate-700 rounded-lg hover:border-primary hover:text-light transition">
+              <button 
+                onClick={() => setShowSignIn(true)}
+                className="w-full px-5 py-2.5 text-sm font-medium text-slate-300 border border-slate-700 rounded-lg hover:border-primary hover:text-light transition"
+              >
                 Sign In
               </button>
-              <button className="w-full px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary hover:from-dark hover:to-primary rounded-lg transition shadow-md">
-                Request Demo
+              <button 
+                onClick={() => setShowSignUp(true)}
+                className="w-full px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary hover:from-dark hover:to-primary rounded-lg transition shadow-md"
+              >
+                Sign Up
               </button>
             </div>
           </div>
         </div>
       )}
+
+      {/* Auth Modals */}
+      <SignIn 
+        isOpen={showSignIn} 
+        onClose={() => setShowSignIn(false)} 
+        onSwitchToSignUp={handleSwitchToSignUp}
+      />
+      <SignUp 
+        isOpen={showSignUp} 
+        onClose={() => setShowSignUp(false)} 
+        onSwitchToSignIn={handleSwitchToSignIn}
+      />
     </nav>
   );
 }

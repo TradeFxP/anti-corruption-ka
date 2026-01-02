@@ -1,4 +1,5 @@
-import { CheckCircle, Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { logo } from '../assets';
 
 export default function CitizenRights() {
   const rights = [
@@ -13,7 +14,7 @@ export default function CitizenRights() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
-            <Shield className="h-12 w-12 text-primary" />
+            <img src={logo} alt="ACC Logo" className="h-12 w-12 object-cover rounded-full" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Citizen Rights</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>

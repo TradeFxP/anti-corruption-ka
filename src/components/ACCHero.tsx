@@ -1,4 +1,5 @@
-import { Shield, AlertCircle, Users, Scale } from 'lucide-react';
+import { AlertCircle, Users, Scale } from 'lucide-react';
+import { logo } from '../assets';
 
 export default function ACCHero() {
   const scrollToSection = (id: string) => {
@@ -13,8 +14,8 @@ export default function ACCHero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-light/30 rounded-full">
-              <Shield className="h-16 w-16 text-primary" />
+            <div className="p-2 bg-light/30 rounded-full overflow-hidden">
+              <img src={logo} alt="ACC Logo" className="h-16 w-16 object-cover rounded-full" />
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6">
