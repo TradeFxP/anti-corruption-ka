@@ -49,7 +49,7 @@ export default function ACCNavigation() {
             <img src={logo} alt="ACC Logo" className="h-10 w-10 object-cover rounded" />
             <div className="flex flex-col">
               <span className="font-bold text-lg text-text leading-tight">  Anti-Corruption Committee</span>
-              <span className="text-xs text-secondary leading-tight">ACC-Andhra Pradesh </span>
+              <span className="text-xs text-secondary leading-tight">ACC-Karnataka </span>
             </div>
           </div>
 

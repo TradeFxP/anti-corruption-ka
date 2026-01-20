@@ -43,7 +43,7 @@ export default function JoinUs() {
 
             <div className="text-center mt-10">
               <p className="text-2xl font-bold text-text mb-6">
-                Together we can build a better Andhra Pradesh
+                Together we can build a better Karnataka
               </p>
               <button className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-dark transition-colors shadow-lg hover:shadow-xl text-lg">
                 Volunteer With Us

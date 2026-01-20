@@ -21,7 +21,7 @@ export default function VisionMission() {
               <h2 className="text-3xl font-bold text-text">Our Vision</h2>
             </div>
             <p className="text-xl text-text/80 leading-relaxed">
-              A corruption-free Andhra Pradesh where <strong>honesty, transparency, and justice</strong> are everyday values.
+              A corruption-free Karnataka where <strong>honesty, transparency, and justice</strong> are everyday values.
             </p>
           </div>
 

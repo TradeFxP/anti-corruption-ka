@@ -18,11 +18,11 @@ export default function ACCFooter() {
               <img src={logo} alt="ACC Logo" className="h-8 w-8 object-cover rounded" />
               <div className="flex flex-col">
                 <span className="font-bold text-lg text-white leading-tight">Anti-Corruption Committee </span>
-                <span className="text-xs font-bold text-white leading-tight"> ACC-Andhra Pradesh</span>
+                <span className="text-xs font-bold text-white leading-tight"> ACC-Karnataka</span>
               </div>
             </div>
             <p className="text-sm text-light/70">
-              Working towards a transparent, honest, and corruption-free Andhra Pradesh.
+              Working towards a transparent, honest, and corruption-free Karnataka.
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export default function ACCFooter() {
           </div>
 
           <div className="text-center text-sm text-white">
-            <p>&copy; {new Date().getFullYear()} Anti-Corruption Committee – Andhra Pradesh. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Anti-Corruption Committee – Karnataka. All rights reserved.</p>
           </div>
         </div>
       </div>

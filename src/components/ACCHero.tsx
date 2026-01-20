@@ -21,7 +21,7 @@ export default function ACCHero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6">
             Anti-Corruption Committee
             <br />
-            <span className="text-primary">Andhra Pradesh</span>
+            <span className="text-primary">Karnataka</span>
           </h1>
           <p className="text-xl md:text-2xl text-secondary mb-4 max-w-3xl mx-auto">
             Working towards a transparent, honest, and corruption-free society

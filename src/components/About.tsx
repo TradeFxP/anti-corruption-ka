@@ -11,7 +11,7 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-text/80 leading-relaxed mb-6">
-            The <strong>Anti-Corruption Committee – Andhra Pradesh</strong> is a public welfare organisation formed to fight corruption at every level of society. We work to educate citizens, support whistle-blowers, promote ethical governance, and encourage responsible administration.
+            The <strong>Anti-Corruption Committee – Karnataka</strong> is a public welfare organisation formed to fight corruption at every level of society. We work to educate citizens, support whistle-blowers, promote ethical governance, and encourage responsible administration.
           </p>
           <p className="text-lg text-text/80 leading-relaxed mb-12">
             We believe <strong>every citizen has the right to fair service</strong> without bribery, harassment, or misuse of power.

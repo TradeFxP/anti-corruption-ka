@@ -36,7 +36,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="bg-gradient-to-br from-light/20 to-white p-8 rounded-2xl shadow-xl border border-light">
             <h3 className="text-2xl font-bold text-text mb-6">
-              Anti-Corruption Committee – Andhra Pradesh
+              Anti-Corruption Committee – Karnataka
             </h3>
 
             <div className="space-y-4">
@@ -44,7 +44,7 @@ export default function Contact() {
                 <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-text mb-1">Phone</h4>
-                  <a href="tel:+919533055666" className="text-text/70 hover:text-primary transition-colors">+91 95330 55666</a>
+                  <a href="tel:+919620308170" className="text-text/70 hover:text-primary transition-colors">+91 96203 08170</a>
                 </div>
               </div>
 
@@ -60,7 +60,12 @@ export default function Contact() {
                 <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-text mb-1">Office Address</h4>
-                  <p className="text-text/70">Tirupati, Andhra Pradesh</p>
+                  <p className="text-text/70">Karnataka</p>
+            <div className="mt-6 p-4 bg-primary/10 border border-primary rounded-lg">
+              <p className="text-sm text-text font-semibold text-center">
+                Contact Person: Hidayathulla Khan
+              </p>
+            </div>
                 </div>
               </div>
 
