@@ -52,7 +52,7 @@ export default function Contact() {
                 <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-text mb-1">Email</h4>
-                  <a href="mailto:support@accka.org.in" className="text-text/70 hover:text-primary transition-colors">support@accap.org.in</a>
+                  <a href="mailto:support@accka.org.in" className="text-text/70 hover:text-primary transition-colors">support@accka.org.in</a>
                 </div>
               </div>
 
